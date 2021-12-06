@@ -197,7 +197,7 @@ def pykmod(teff,logg,microt,metal,outfile):
                 
             #Write the footer
             f.write(str(round(microt,2))+'\n')
-            f.write('NATOMS         0	-1.\n')
+            f.write('NATOMS         0	' + str(round(metal,1)) +'\n')
 
 def py_kmod_main():
     
