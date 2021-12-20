@@ -9,8 +9,8 @@ Included for convenience are ATLAS9 and PHOENIX BT-Settl model atmospheres which
 (PyKMOD should be run with the latest versions of SciPy and Numpy)
 
 ### Installation
-- Download the files provided and extract them to a directory of your choice. 
-- The ATLAS and PHOENIX archives must also be extracted so that they are folders in the same directory as the Python scripts
+- Download the files provided and unzip them to a directory of your choice. 
+- Extract the ATLAS and PHOENIX archives so that they are folders in the same directory as the Python scripts.
 - If you want to import it as a python module, you can also copy the fully extracted files to your Python lib folder to make this easier.
 
 ### Using PyKMOD
