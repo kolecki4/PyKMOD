@@ -21,7 +21,7 @@ def rd_phxmod(teff,logg,metal):
     gstr += str(round(logg, 1))
     if metal > 0: mstr = '+'
     else: mstr = '-'
-    mstr += str(round(metal,1))
+    mstr += str(round(abs(metal),1))
     filename = phxpath+'lte'+tstr+gstr+mstr+'.BT-Settl.6'
     return np.genfromtxt(filename)
 
@@ -155,6 +155,7 @@ def phxmod(teff,logg,microt,metal,outfile):
             f.write('NEXTGEN\n')
             f.write('TEFF' + teffstring + '.  GRAVITY' + loggstring + ' LTE \n')
             f.write('NTAU          72\n')
+            f.write('5000\n')
             
             # Write the body
             for i in range(ntau):
