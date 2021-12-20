@@ -13,13 +13,6 @@ from scipy.interpolate import interp1d
 import sys
 import os.path
 
-#kpath='/home/jared/fl/fl_0.79.47/lib/'
-
-availteff=np.append(np.append(np.asarray([3500+(250*i) for i in range(35)]),np.asarray([12500+(500*i) for i in range(16)])),np.asarray([21000+(1000*i) for i in range(10)]))
-availlogg=np.asarray([0.5*i for i in range(11)])
-availmetal=np.asarray([-5,-4.5,-4,-3.5,-3,-2.8,-2.5,-2.3,-2.0,-1.8,-1.5,-1.3,-1.0,-0.8,-0.5,-0.3,0,0.3,0.5,0.8,1,1.5])
-#availmetal=np.array([-2.5+0.5*i for i in range(10)])
-
 def rd_kmod(teff,logg,metal):                                                                 
     if metal >= 0:                                               
         s2='p'                                                  
@@ -29,7 +22,7 @@ def rd_kmod(teff,logg,metal):
     s3 = str(metal).replace('.','').replace('-','')     
          
     path = os.path.abspath(os.path.dirname(__file__))
-    kpath= path + '/modelatmospheres/'                                                         
+    kpath= path + '/ATLAS/'                                                         
     #filename = kpath+'a'+s2+s3+'k2odfnew.dat'                    
     filename = kpath+'m'+s2+s3+'cp00op00.mod'  
                                                            
